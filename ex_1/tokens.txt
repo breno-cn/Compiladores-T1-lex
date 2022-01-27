@@ -1,0 +1,11 @@
+Há dois tipos de comentários, o de uma única linha, e o de uma ou mais linhas.
+
+O primeiro pode ser reconhecido da seguinte forma:
+//([a-z]|[A-Z]|(0-9)|( )|(\t))*\r\n
+
+Já o segundo:
+/\*([a-z]|[A-Z]|[0-9]|( )|(\t)|(\r\n))*\*\
+
+Portanto, para um token que pode reconhecer ambos padrões:
+
+(//([a-z]|[A-Z]|(0-9)|( )|(\t))*\r\n)|(/\*([a-z]|[A-Z]|[0-9]|( )|(\t)|(\r\n))*\*\)
